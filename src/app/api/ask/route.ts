@@ -8,7 +8,7 @@ const DAY_IN_MS = 24 * 60 * 60 * 1000;
 
 export async function POST(req: NextRequest) {
   try {
-    const ip = req.headers.get('x-forwarded-for') || req.ip || 'anonymous';
+    const ip = req.headers.get('x-forwarded-for') || 'anonymous';
     const now = Date.now();
     
     // Check rate limit
